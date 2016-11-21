@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Burrito;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class CardsController extends Controller
+class BurritosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,9 @@ class CardsController extends Controller
      */
     public function index()
     {
-          return view('cards.index');
+        $burritos = Burrito::all();
+
+        return view('burritos.index', compact('burritos'));
     }
 
     /**
@@ -48,7 +51,9 @@ class CardsController extends Controller
      */
     public function show($id)
     {
-        //
+        $burrito = Burrito::find($id);
+
+        return view('burritos.show', compact('burrito'));
     }
 
     /**

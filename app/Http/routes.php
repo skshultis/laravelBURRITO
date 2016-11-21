@@ -19,6 +19,8 @@ Route::get('contact', 'PagesController@contact');
 
 Route::get('burritos', 'BurritosController@index');
 
+Route::get('burritos/{id}', 'BurritosController@show');
+
 // Route::get('about', function()  {
 //   return view('about');
 // });
