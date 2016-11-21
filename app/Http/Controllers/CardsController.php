@@ -7,28 +7,18 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class PagesController extends Controller
+class CardsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function home()
+    public function index()
     {
-
-      return view('welcome');
+          return view('cards.index');
     }
 
-    public function about()
-    {
-        return view('about');
-    }
-
-    public function contact()
-    {
-        return view('contact');
-    }
     /**
      * Show the form for creating a new resource.
      *

@@ -1,11 +1,7 @@
 @extends('layouts')
 
 @section('content')
-      @unless (empty($people))
-          There are some people:
-      @endunless
+  <h1>BURRITOS</h1>
 
-      @foreach ($people as $person)
-          <li>{{ $person }}</li>
-      @endforeach;
+  <h2>Hellow Wrold this is my burrtio app</h2>
 @stop
