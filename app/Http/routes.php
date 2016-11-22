@@ -13,9 +13,17 @@
 
 Route::resource('burritos', 'BurritosController');
 
+// Route::resource('burritos', 'BurritosController', [
+//   'except' => [
+//     'edit'
+//   ]
+// ]);
+
 Route::get('about', 'PagesController@about');
 
 Route::get('contact', 'PagesController@contact');
+
+Route::resource('tacos', 'TacosController');
 
 // Route::get('/', 'PagesController@home');
 //
