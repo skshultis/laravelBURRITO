@@ -12,10 +12,10 @@
 
 <h3>Add Your Review</h3>
 
-<form method="POST" action="/burritos/{{ $burrito->id }}">
+<form method="POST" action="/burritos/{{ $burrito->id }}/reviews">
   {{ csrf_field() }}
     <textarea name="body" placeholder="What'd You Think?"></textarea>
-    <button type="submit" class="btn btn-primary btn-lg">SUBMIT BURRITO</button>
+    <button type="submit" class="btn btn-primary btn-lg">submit review</button>
 </form>
 
 <!-- {!! Form::open(['url' => '/requests', 'files' => true]) !!}

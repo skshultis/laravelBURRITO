@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('burritos/{burrito}/reviews', 'ReviewsController@store');
+
 Route::resource('burritos', 'BurritosController');
 
 // Route::resource('burritos', 'BurritosController', [
@@ -18,7 +20,7 @@ Route::resource('burritos', 'BurritosController');
 //     'edit'
 //   ]
 // ]);
-Route::post('burritos/{burrito}/reviews', 'ReviewsController@store');
+
 
 // Route::get('/burritos/{ $burrito }/reviews', "BurritosController@show");
 

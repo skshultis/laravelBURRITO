@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Burrito;
+use App\Review;
+
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -36,9 +39,14 @@ class ReviewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Burrito $burrito)
     {
-        return $request->all();
+        
+        return $burrito;
+
+        $review = new Review;
+
+        $review->body = $request-> body;
     }
 
     /**
