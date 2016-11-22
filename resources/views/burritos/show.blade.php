@@ -10,4 +10,24 @@
   @endforeach
 </ul>
 
+<h3>Add Your Review</h3>
+
+<form method="POST" action="/burritos/{{ $burrito->id }}">
+  {{ csrf_field() }}
+    <textarea name="body" placeholder="What'd You Think?"></textarea>
+    <button type="submit" class="btn btn-primary btn-lg">SUBMIT BURRITO</button>
+</form>
+
+<!-- {!! Form::open(['url' => '/requests', 'files' => true]) !!}
+
+{!! Form::label('name', 'Burrito') !!}
+    {!! Form::text('name') !!}
+
+{!! Form::label('ingredients', "What's in There?") !!}
+        {!! Form::text('ingredients') !!}
+
+<button type="submit" class="btn btn-primary btn-lg">SUBMIT BURRITO</button>
+
+{!! Form::close() !!} -->
+
 @stop

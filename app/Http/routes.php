@@ -18,14 +18,17 @@ Route::resource('burritos', 'BurritosController');
 //     'edit'
 //   ]
 // ]);
+Route::post('burritos/{burrito}/reviews', 'ReviewsController@store');
+
+// Route::get('/burritos/{ $burrito }/reviews', "BurritosController@show");
+
+// Route::resource('reviews', 'ReviewsController');
 
 Route::get('about', 'PagesController@about');
 
 Route::get('contact', 'PagesController@contact');
 
-Route::resource('tacos', 'TacosController');
-
-// Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@home');
 //
 // Route::get('burritos', 'BurritosController@index');
 //

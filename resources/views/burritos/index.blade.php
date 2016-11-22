@@ -9,4 +9,5 @@
         {{ $burrito->ingredients }}
     </div>
   @endforeach
-@stop
+
+  @stop

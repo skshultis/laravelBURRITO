@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Burrito;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class TacosController extends Controller
+class ReviewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class TacosController extends Controller
      */
     public function index()
     {
-        return 'all tacos';
+        //
     }
 
     /**
@@ -26,7 +27,7 @@ class TacosController extends Controller
      */
     public function create()
     {
-        return 'add a new taco to the db';
+        //
     }
 
     /**
@@ -37,7 +38,7 @@ class TacosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->all();
     }
 
     /**
@@ -48,7 +49,7 @@ class TacosController extends Controller
      */
     public function show($id)
     {
-        return 'show the taco with id ' . $id;
+        //
     }
 
     /**
