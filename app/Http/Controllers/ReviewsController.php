@@ -39,14 +39,16 @@ class ReviewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Burrito $burrito)
+    public function store(Request $request, $burrito_id)
     {
-        
-        return $burrito;
 
         $review = new Review;
 
         $review->body = $request-> body;
+
+        $review->burrito_id = $burrito_id;
+
+        $review->save();
     }
 
     /**

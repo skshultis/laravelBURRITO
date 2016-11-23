@@ -11,7 +11,7 @@
 |
 */
 
-Route::post('burritos/{burrito}/reviews', 'ReviewsController@store');
+Route::post('burritos/{burritos}/reviews', 'ReviewsController@store');
 
 Route::resource('burritos', 'BurritosController');
 
